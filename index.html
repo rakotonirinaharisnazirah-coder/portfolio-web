@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Haris | Développeur Web</title>
+<meta name="description" content="Portfolio professionnel de Haris, étudiant en informatique spécialisé en développement web moderne.">
+<link rel="stylesheet" href="style.css">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+<style>
+       *{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Segoe UI',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#0f172a;
+color:#f1f5f9;
+animation: slideUp 0.7s ease-in-out;
+}
+
+header{
+position:fixed;
+width:100%;
+display:flex;
+justify-content:space-between;
+padding:20px 50px;
+background:rgba(15,23,42,0.9);
+backdrop-filter:blur(10px);
+z-index:1000;
+animation: slideUp 1s ease-in-out;
+}
+
+nav a{
+color:#f1f5f9;
+margin-left:20px;
+text-decoration:none;
+transition:0.3s;
+animation: slideUp 1.5s ease-in-out;
+}
+
+nav a:hover{
+color:#3b82f6;
+}
+
+.logo{
+font-size:24px;
+font-weight:bold;
+animation: slideUp 1s ease-in-out;
+}
+
+.hero{
+display:flex;
+align-items:center;
+justify-content:space-between;
+min-height:100vh;
+padding:100px 10%;
+animation: slideUp 1.8s ease-in-out;
+}
+
+.hero-text{
+max-width:500px;
+}
+
+.hero-text h1{
+font-size:40px;
+margin-bottom:10px;
+}
+
+.primary{
+color:#3b82f6;
+}
+
+.hero-img img{
+width: 350px;
+height: 400px;
+border-radius:50%;
+box-shadow:0 0 40px #3b82f6;
+}
+
+.btn{
+display:inline-block;
+padding:10px 25px;
+background:#3b82f6;
+color:white;
+border-radius:30px;
+text-decoration:none;
+margin-top:15px;
+transition:0.3s;
+animation: slideUp 1.8s ease-in-out;
+}
+
+.btn:hover{
+background:#2563eb;
+transform:translateY(-3px);
+}
+
+.section-title{
+text-align:center;
+margin:80px 0 40px;
+font-size:30px;
+color:#3b82f6;
+}
+
+.card{
+background:#1e293b;
+padding:30px;
+border-radius:15px;
+width:80%;
+margin:0 auto;
+animation: slideUp 1.5s ease-in-out;
+}
+
+.skills-container,
+.projects-container{
+display:flex;
+justify-content:center;
+gap:30px;
+flex-wrap:wrap;
+animation: slideUp 1s ease-in-out;
+}
+
+.skill-card,
+.project-card{
+background:#1e293b;
+padding:30px;
+border-radius:15px;
+text-align:center;
+width:200px;
+transition:0.3s;
+}
+
+.skill-card:hover,
+.project-card:hover{
+transform:translateY(-10px);
+}
+
+.skill-card i{
+font-size:40px;
+color:#3b82f6;
+margin-bottom:10px;
+}
+
+footer{
+text-align:center;
+padding:20px;
+margin-top:50px;
+background:#1e293b;
+}
+
+@media(max-width:900px){
+.hero{
+flex-direction:column;
+text-align:center;
+}
+.hero-img{
+margin-top:30px;
+}
+}
+.social-icons{
+display:flex;
+gap:15px;
+margin-top:20px;
+}
+
+.social-icons a{
+width:45px;
+height:45px;
+display:flex;
+align-items:center;
+justify-content:center;
+border:2px solid #3b82f6;
+border-radius:50%;
+color:#3b82f6;
+font-size:18px;
+transition:0.3s ease;
+}
+
+.social-icons a:hover{
+background:#3b82f6;
+color:white;
+transform:translateY(-5px);
+box-shadow:0 10px 20px rgba(59,130,246,0.4);
+}
+/* ============================= */
+/* 📱 RESPONSIVE MOBILE */
+/* ============================= */
+
+@media (max-width: 992px){
+
+    body{
+        background:#071c3a;
+    }
+
+    header{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    .nav{
+    margin-left: 20px;
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+    }
+
+    .navbar a:hover,
+    .navbar a.active {
+    color: #38bdf8;
+    }
+
+    .hero{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .right{
+        padding-left:0;
+        margin-top:40px;
+    }
+
+    .image-box{
+        width:220px;
+        height:220px;
+    }
+
+    .right h1{
+        font-size:30px;
+    }
+
+}
+@keyframes slideUp {
+    from {
+        opacity: 1;
+        transition: translate(-50px);
+    }
+    to {
+        opacity: 0;
+        transition: translate(0);
+    }
+}
+</style>
+</head>
+<body>
+
+<header>
+    <div class="logo">Haris.</div>
+    <nav>
+        <a href="#home">Accueil</a>
+        <a href="#about">À propos</a>
+        <a href="#skills">Compétences</a>
+        <a href="#projects">Projets</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<section id="home" class="hero">
+    <div class="hero-text">
+        <h1>Bonjour, je suis <span class="primary">Haris</span></h1>
+        <h2><span class="typing"></span></h2>
+        <p>Je suis Haris ,étudiant en L1 d'Informatique à l'EMIT
+Fianarantsoa passionne par le développement web et
+Développeur d'application internet-intranet.</p>
+        <br><a href="portfolio.pdf" class="btn">Telecharger mon cv</a>
+        <div class="social-icons">
+    <a href="https://github.com/rakotonirinaharisnazirah-coder" target="_blank">
+        <i class="fab fa-github"></i>
+    </a>
+
+    <a href="https://linkedin.com/in/haris-nazirah-rakotonirina-8498853aa" target="_blank">
+        <i class="fab fa-linkedin-in"></i>
+    </a>
+
+    <a href="https://facebook.com/Haris Nazirah" target="_blank">
+        <i class="fab fa-facebook-f"></i>
+    </a>
+</div>
+    </div>
+
+    <div class="hero-img">
+        <img src="image/photo.jpg" alt="Haris">
+    </div>
+</section>
+
+
+<section id="about">
+    <h2 class="section-title">À propos</h2>
+    <div class="card">
+        <p>
+            Je suis étudiant en Licence 1 Informatique à EMIT Fianarantsoa.
+            Je développe des sites web modernes, responsives et professionnels.
+            Mon objectif est de devenir développeur d'applications web et intranet.
+        </p>
+    </div>
+</section>
+
+<section id="skills">
+    <h2 class="section-title">Compétences</h2>
+    <div class="skills-container">
+        <div class="skill-card">
+            <i class="fab fa-html5"></i>
+            <h3>HTML</h3>
+        </div>
+        <div class="skill-card">
+            <i class="fab fa-css3-alt"></i>
+            <h3>CSS</h3>
+        </div>
+        <div class="skill-card">
+            <i class="fab fa-js"></i>
+            <h3>JavaScript</h3>
+        </div>
+        <div class="skill-card">
+            <i class="fab fa-github"></i>
+            <h3>GitHub</h3>
+        </div>
+    </div>
+</section>
+
+<section id="projects">
+    <h2 class="section-title">Projets</h2>
+    <div class="projects-container">
+        <div class="project-card">
+            <h3>Portfolio Personnel</h3>
+            <p>creation d'un Site web professionnel heberger dans le GitHub page développé en HTML, CSS et JavaScript.</p>
+        </div>
+    </div>
+</section>
+
+<section id="contact">
+    <h2 class="section-title">Contact</h2>
+    <div class="card">
+        <p>Email : rakotonirinaharisnazirah@gmail.com</p>
+        <p>Téléphone : +261 38 33 701 67</p>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 Haris - Portfolio Professionnel</p>
+</footer>
+
+<script>
+     const words = ["Développeur Web", "Étudiant en Informatique"];
+let i = 0;
+let j = 0;
+let currentWord = "";
+let isDeleting = false;
+const typingElement = document.querySelector(".typing");
+
+function typeEffect(){
+currentWord = words[i];
+
+if(isDeleting){
+typingElement.textContent = currentWord.substring(0,j--);
+}else{
+typingElement.textContent = currentWord.substring(0,j++);
+}
+
+let speed = isDeleting ? 50 : 100;
+
+if(!isDeleting && j === currentWord.length){
+speed = 1500;
+isDeleting = true;
+}else if(isDeleting && j === 0){
+isDeleting = false;
+i = (i+1) % words.length;
+speed = 300;
+}
+
+setTimeout(typeEffect,speed);
+}
+
+typeEffect();
+</script>
+</body>
+</html>
